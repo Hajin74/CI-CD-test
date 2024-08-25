@@ -37,3 +37,13 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+// 배포
+jar {
+    enabled = true
+    manifest {
+        attributes(
+                'Main-Class': 'org.example.deploytest.DeployTestApplication' // Main-Class 설정
+        )
+    }
+}
